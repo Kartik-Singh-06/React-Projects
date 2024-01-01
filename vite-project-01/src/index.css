@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #313131;
+    /* color: aliceblue; */
+}
+
+#container{
+    margin: 300px 700px;
+}
+.btn{
+    padding: 10px 20px;
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 701;
+    margin-bottom: 20px;
+}
+#count{
+  width: fit-content;
+  border: 1px solid #ffff;
+  background-color: #fff;
+  padding: 5px 9px;
+  border-radius: 5px;
+  margin-left: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
