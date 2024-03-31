@@ -4,13 +4,16 @@ function useCurrencyInfo(currency){
 
     const [data , setData] =useState({}) 
 
+    const apiFun = async ()=>{
+      const item = await fetch(`https://v6.exchangerate-api.com/v6/6072dda97aef6d737d25ea5e/latest/${currency}`)
+      const json = await item.json();
+      setData(json?.conversion_rates)
+    }
+
     useEffect(()=>{
-      fetch(`https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${currency}.json`)
-      .then((res)=>res.json())
-      .then((res)=>setData(res[currency]))
-      console.log(data);
+      apiFun();
     }, [currency])
-    console.log(data);
+
     return data
 }
 

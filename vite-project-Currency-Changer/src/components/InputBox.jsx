@@ -37,7 +37,7 @@ const amountInputId = useId()
                   onChange={(e)=>onCurrencyChange && onCurrencyChange(e.target.value)}
                   disabled={currencyDisable}
               >
-                  {currencyOption.map((Currency)=>{
+                  {currencyOption.map((Currency,index)=>{
                     return <>
                     <option key={Currency} value={Currency}>
                         {Currency}
